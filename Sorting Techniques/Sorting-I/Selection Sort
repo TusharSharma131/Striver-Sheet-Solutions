@@ -1,0 +1,56 @@
+/*
+Question Link 
+https://practice.geeksforgeeks.org/problems/selection-sort/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=selection-sort
+*/
+
+// GFG Solution in C++ :
+
+void selectionSort(int arr[], int n)
+    {
+       int MinIndex,i,j;
+       for(i=0; i<n-1; i++)
+       {
+          MinIndex=i; 
+       for(j=i+1; j<n; j++)
+       {
+         if(arr[j]<arr[MinIndex])
+         MinIndex=j;
+       }
+       swap(&arr[i],&arr[MinIndex]);
+       }
+    }
+   //--------------------------------------------------------------------------------------------------------------------------------------
+   
+   // Solution in Java :
+   
+   int  select(int arr[], int i)
+	{
+        selectionSort(arr, arr.length);
+        return arr[i];
+	}
+	
+	void selectionSort(int arr[], int n)
+	{
+	      for (int i = 0; i < n - 1; i++) 
+	      {
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) 
+            {
+              if (arr[j] < arr[minIndex])
+                  minIndex = j;
+            }
+            swap(arr, i, minIndex);
+        }
+	}
+	 void swap(int[] arr, int i, int j) 
+	 {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+//----------------------------------------------------------------------------------------------------------------------------------------------  
+  /* Time & Space Complexity of the Question : 
+     Time Complexity : O(N^2) for Best, Average and Worst Cases.
+     Space Complexity : O(1) because there is no used any additional data struture.So, Space is constant regerdless  of the size of the input.
+   */
+   
