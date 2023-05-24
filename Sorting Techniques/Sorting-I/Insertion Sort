@@ -1,0 +1,56 @@
+/*
+Question Link 
+https://practice.geeksforgeeks.org/problems/insertion-sort/0?category[]=Algorithms&page=1&query=category[]Algorithmspage1&utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=insertion-sort
+*/
+
+// GFG Solution in C++ :  //
+
+ void insertionSort(int arr[], int n)
+    {
+        int i,j,temp;
+        for(i=1; i<n; i++)
+        {
+            temp=arr[i];
+        for(j=i-1; j>=0; j--)
+        {
+            if(temp<arr[j])
+            {
+            arr[j+1]=arr[j];
+            }
+            else{
+               break; 
+            }
+        }
+        arr[j+1]=temp;
+        }
+    }
+    
+      //--------------------------------------------------------------------------------------------------------------------------------------//
+   
+   // Solution in Java :  //
+   
+   public static void insert(int[] arr, int i) 
+  {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > key) 
+        {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+
+    public static void insertionSort(int[] arr, int n)
+    {
+        for (int i = 1; i < n; i++) 
+        {
+            insert(arr, i);
+        }
+    }
+    
+  //-------------------------------------------------------------------------------------------------------------------------------------------- //  
+  /* Time & Space Complexity of the Question : 
+     Time Complexity : O(N) for Best and O(N^2) for Average and Worst Cases.
+     Space Complexity : O(1) because there is no used any additional data struture.So, Space is constant regerdless  of the size of the input.
+   */
