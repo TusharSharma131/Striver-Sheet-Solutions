@@ -3,7 +3,7 @@ Question Link
 https://practice.geeksforgeeks.org/problems/selection-sort/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=selection-sort
 */
 
-// GFG Solution in C++ :
+// GFG Solution in C++ :  //
 
 void selectionSort(int arr[], int n)
     {
@@ -19,9 +19,9 @@ void selectionSort(int arr[], int n)
        swap(&arr[i],&arr[MinIndex]);
        }
     }
-   //--------------------------------------------------------------------------------------------------------------------------------------
+   //--------------------------------------------------------------------------------------------------------------------------------------//
    
-   // Solution in Java :
+   // Solution in Java :  //
    
    int  select(int arr[], int i)
 	{
@@ -48,7 +48,7 @@ void selectionSort(int arr[], int n)
         arr[i] = arr[j];
         arr[j] = temp;
     }
-//----------------------------------------------------------------------------------------------------------------------------------------------  
+//-------------------------------------------------------------------------------------------------------------------------------------------- //  
   /* Time & Space Complexity of the Question : 
      Time Complexity : O(N^2) for Best, Average and Worst Cases.
      Space Complexity : O(1) because there is no used any additional data struture.So, Space is constant regerdless  of the size of the input.
